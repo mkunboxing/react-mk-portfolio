@@ -6,7 +6,7 @@ import { Link } from 'react-scroll'
 
 const Navbar = () => {
     return (
-        <div className='w-full h-24 mx-auto flex justify-between items-center font-titleFont border-b-[2px] border-b-gray-600'>
+        <div className='sticky top-0 z-50 bg-bodyColor w-full h-24 mx-auto flex justify-between items-center font-titleFont border-b-[2px] border-b-gray-600'>
             <div>
                 <img src={logo} alt="logo" />
             </div>
@@ -15,7 +15,7 @@ const Navbar = () => {
                     {
                         navLinksdata.map(({_id,title,link})=>(
                             <li
-                            className='text-base font-normal text-gray-400 tracking-wide cursor-pointer
+                            className='text-base font-semibold text-gray-400 tracking-wide cursor-pointer
                             hover:text-designColor duration-400'
                              key={_id}>
                                 <Link activeClass='active'
